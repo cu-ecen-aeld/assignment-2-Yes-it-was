@@ -12,6 +12,8 @@ build_dir:
 
 clean: 
 	rm -r build
+	rm writer
 
 writer: writer.c | build_dir 
 	$(CC) writer.c $(CFLAGS) -o build/writer
+	cp build/writer writer
